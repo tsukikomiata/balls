@@ -6,7 +6,7 @@ class Ball(pg.sprite.Sprite):
     def __init__(self, radius, x, y):
         super().__init__(all)
         self.radius = radius
-        self.image = pg.Surface((radius * 2, radius * 2), pg.SRCALPHA, 16)
+        self.image = pg.Surface((radius * 2, radius * 2), pg.SRCALPHA, 32)
         pg.draw.circle(self.image, pg.Color(0, 255, 127), (radius, radius), radius)
         self.rect = pg.Rect(x, y, radius * 2, radius * 2)
         self.vx = random.randint(-5, 5)
